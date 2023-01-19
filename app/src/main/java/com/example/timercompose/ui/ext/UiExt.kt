@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge.ui.ext
+package com.example.timercompose.ui.ext
 
 import android.os.Build
 import androidx.annotation.RequiresApi

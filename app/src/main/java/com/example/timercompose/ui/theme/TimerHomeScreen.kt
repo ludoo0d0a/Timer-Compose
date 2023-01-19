@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge.ui.theme
+package com.example.timercompose.ui.theme
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -34,11 +34,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.model.ButtonState
-import com.example.androiddevchallenge.model.TimerModel
-import com.example.androiddevchallenge.model.TimerViewModel
-import com.example.androiddevchallenge.ui.ext.format
+import com.example.timercompose.R
+import com.example.timercompose.model.ButtonState
+import com.example.timercompose.model.TimerModel
+import com.example.timercompose.model.TimerViewModel
+import com.example.timercompose.ui.ext.format
 
 @ExperimentalAnimationApi
 @RequiresApi(Build.VERSION_CODES.O)
@@ -87,6 +87,7 @@ fun TimerTopSection(time: String, remainingTime: Long) {
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.O)
 @ExperimentalAnimationApi
 @Composable
 fun TimerButtons(timerState: TimerViewModel) {
@@ -106,6 +107,7 @@ fun TimerButtons(timerState: TimerViewModel) {
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun ButtonLayout(timerState: TimerViewModel) {
     val toggle by timerState.viewState.observeAsState()
@@ -128,6 +130,7 @@ fun ButtonLayout(timerState: TimerViewModel) {
             color = MaterialTheme.colors.secondaryVariant
             textColor = Color.Black
         }
+        else -> {}
     }
     Row(
         modifier = Modifier.fillMaxWidth(),

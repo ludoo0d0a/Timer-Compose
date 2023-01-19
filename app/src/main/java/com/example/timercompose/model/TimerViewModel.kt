@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge.model
+package com.example.timercompose.model
 
 import android.os.Build
 import android.os.CountDownTimer
@@ -63,6 +63,7 @@ class TimerViewModel : ViewModel() {
         )
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun buttonSelection() {
         val state = _viewState.value
 
@@ -76,6 +77,7 @@ class TimerViewModel : ViewModel() {
             Status.FINISHED -> {
                 resetTimer()
             }
+            else -> {}
         }
 
     }
